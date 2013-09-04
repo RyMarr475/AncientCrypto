@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/maintext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:gravity="center"
+        android:text="Ancient Cryptography"
+        android:textSize="40dp" />
+
+    <Button
+        android:id="@+id/launchLearn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Learn how to crack ancient secret codes"
+        android:gravity="center" 
+        android:onClick="launchLearn"/>
+
+    <Button
+        android:id="@+id/launchChallenge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Practice with codebreaking challenges"
+        android:gravity="center"
+        android:onClick="launchChallenge" />
+</LinearLayout>

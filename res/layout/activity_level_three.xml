@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Free Range or Penned?"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="You are a historian attempting to uncover the secrets of the Freemasons. You have found some information about their method of secret writing, but you cannot read it because it is encrypted using this very method. All you can find are these strange symbols and a drawing at the bottom of the page that looks like a pig pen. There seems to be letters that have been blotched out in these pens." />
+            
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="The ciphertext reads: " />
+            
+            <ImageView
+                android:id="@+id/freqpic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/freemason" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Below is the pig pen drawing." />
+
+
+            <ImageView
+                android:id="@+id/freqpic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/drawing" />
+            
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Figure out which letter belongs in each pen. Then change the following message into english." />
+
+            <ImageView
+                android:id="@+id/freqpic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/checkpicfree" />
+            
+            <EditText
+                android:id="@+id/plaintextlevel3"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="Type message here"
+                android:inputType="textMultiLine"
+                android:maxLines="3" />                
+
+            <Button
+                android:id="@+id/lv3Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lv3Check"
+                android:text="Check answer" />
+            
+             <TextView
+                android:id="@+id/feedbackLv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="" />
+             
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

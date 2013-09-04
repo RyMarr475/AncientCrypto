@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LevelOne" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="All about Babbage"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"     />
+        
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="I'm too lazy to come up with a back story for this question, just solve the Vigenere Cipher with key length 5." />
+
+	<TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="The ciphertext reads: Udeigik Xesweya mj v hmzi ncska rrhi ao Gyvvdaw Svftwkv vrv dmj ieea mj vpkk Gyvvdaw Svftwkv wyl wx kci kwqv omea lzn rsii nvw Udeigik Xesweya wf D kmawj tsm yslgh bqwk xedh lzh Gzwvczw Twfsvkw usl frgs ayvx A wq jvcajk? Rgwg, Ylrmpwo Frwfsci. Rih ldvfr wgii Tcejhij Wetxexz mf plvmi xkv xjsv iirnyja. Grwfsci. Ggsl paznx. Ab cfp eupyrgpq oscqiv plzn ifpmiz xzerx, D ehlprph qky. Z mishpp olgqkyo xzwx ejfgzc njydz etoyshpp nsdri zo xzew wvv. A'hp apwl seii cgq rfr, mx usl vvw oxzgp vagittlerx, olwni zn nmox djvw neeyse xeeoij ysddry xitvyka M eziv ps kttw isiz pwpxvmw. Zwlr eykp ozyhajk, pjy hnssvfdu wkjthah rgvwwhp, wyl plzn mk plv hskp mdksjpeeo tsnx. Jreyuscjfwplrnllwkjrijri." />
+
+	<TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Enter the key below" />
+	
+	<TextView
+        android:id="@+id/feedbackLv4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="" />
+	
+	<EditText
+	    android:id="@+id/lv4Answer"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:ems="10" >
+
+	    <requestFocus />
+	</EditText>
+
+	<Button
+	    android:id="@+id/lv4Button"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:onClick="lv4Check"
+	    android:text="Check answer" />
+
+</LinearLayout>

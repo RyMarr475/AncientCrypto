@@ -1,0 +1,125 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:descendantFocusability="beforeDescendants"
+			android:focusableInTouchMode="true"  >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="The Monoalphabetic Substitution Cipher"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            
+             <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="What is it?"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="The monoalphabetic substitution is a very old form of cryptography. It works by replacing each letter of the alphabet with a different symbol. This symbol can be a letter of the alphabet, or it can be something else like pictures.	" />
+
+            
+             <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="How does it work?"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+             
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="The monoalphabetic substitution cipher is like the Caesar Cipher, but instead of shifting down letters each letter is assigned its own letter pair in a key.	For example, the key &apos;plmoknijbuhvygctfxrdzeswaq&apos; would encrypt a to p, b to l, c to m and so on." />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="You can play around with this Cipher with a key that has been randomly generated for you." />
+
+            <TextView
+                android:id="@+id/keyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="The key is: " />
+
+            <EditText
+                android:id="@+id/plaintext"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_weight="0.10"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="Type the text to be encrypted here. Scroll down or press the back button when you are done."
+                android:inputType="textMultiLine"
+                android:maxLines="10" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/encrypt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="encryptClick"
+                    android:text="Encrypt" />
+
+                <Button
+                    android:id="@+id/decrypt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="decryptClick"
+                    android:text="Decrypt" />
+            </LinearLayout>
+            
+             <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="How is it broken?"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+             
+             <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="The monoalphabetic is more secure than the Caesar Cipher because it has 26! (4 x 10^26) possibilities. A computer can still break this code easily, but remember that this cipher was used more than 2000 years ago, so checking every possibility would be impossible. These codes are broken by analysis of letter frequencies. If a message is long enough, the letters should follow letter frequencies similar to those of the language the text was written in, so the most frequent letters (e in the english language) or least frequent letters (z in the english language) can be easily spotted. The rest of the letters can be filled in using logic." />
+            
+             
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

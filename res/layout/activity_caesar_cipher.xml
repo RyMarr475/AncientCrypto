@@ -1,0 +1,125 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:descendantFocusability="beforeDescendants"
+			android:focusableInTouchMode="true" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="The Caesar Cipher"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="What is it?"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:padding="10dp"
+                android:text="	The Caesar Cipher is one of the oldest and simplest forms of cryptography. It is a simplified version of the monoalphabetic substitution cipher, which you will learn later." />
+
+             <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="How does it work?"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="	The Caesar Cipher works by shifting every letter over by a set number of positions in the alphabet. For example, a Caesar Cipher with a shift of 2 will encrypt a to c and b to d." />
+
+             
+                
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="You can play around with the cipher below to see how it works.  Make sure you put a key before you encrypt or decrypt, between 0 and 25" />
+
+            <EditText
+                android:id="@+id/plaintext"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_weight="0.10"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="Type the text to be encrypted here. Scroll down or press the back button when you are done."
+                android:inputType="textMultiLine"
+                android:maxLines="10" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|center"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/key"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="2"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/encrypt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="encryptClick"
+                    android:text="Encrypt" />
+
+                <Button
+                    android:id="@+id/decrypt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="decryptClick"
+                    android:text="Decrypt" />
+            </LinearLayout>
+            
+              <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="How is it broken?"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+             
+             <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="This cipher is broken easily by testing all shift numbers. Since there are only 26 possible outcomes, it can be cracked in minutes even without the help of a computer." />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

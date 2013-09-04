@@ -1,0 +1,177 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:descendantFocusability="beforeDescendants"
+			android:focusableInTouchMode="true"  >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="The Vigenere Cipher"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            
+             <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="What is it?"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="The Vigenere Cipher is a simple yet powerful modification of the Caesar Cipher. While being easy to implement and use, the Vigenere Cipher remained unbroken for 3 centuries (this is what we think to be true, codebreaking advancements are often made by government agencies that have a habit of keeping everything classified.)" />
+
+            
+             <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="How does it work?"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+             
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="The Vigenere Cipher is a simple form of polyalphabetic substitution cipher. First you need a chart of every Caesar Cipher alphabet shift, as seen below." />
+
+            <ImageView
+                android:id="@+id/freqpic"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:gravity="center"
+                android:src="@drawable/vigenere" />
+            
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Next you need a key. Our key will be CRYPTO. Now we will cycle through our message, encrypting the first letter with the Caesar Cipher that starts with C, the second letter with the Caesar Cipher that starts with R, and so on. (You can use the above chart as a grid. Find the current letter of the key on the left side, the current letter of the message on the top line, and where they intersect is the encrypted letter.)" />
+            
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="You can play around with this Cipher. The key is still CRYPTO." />
+
+
+            <EditText
+                android:id="@+id/plaintextVig"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_weight="0.10"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="Type the text to be encrypted here. Scroll down or press the back button when you are done."
+                android:inputType="textMultiLine"
+                android:maxLines="10" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/encryptVig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="encryptClick"
+                    android:text="Encrypt" />
+
+                <Button
+                    android:id="@+id/decryptVig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="decryptClick"
+                    android:text="Decrypt" />
+            </LinearLayout>
+            
+             <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="How is it broken?"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+             
+             <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Because we are cycling through more than one alphabet to encrypt the message (hence the term 'polyalphabetic cipher') the same letter can be encrypted to more than one letter, and more than one letter can me encrypted to the same letter. This throws frequency analysis out the window, which is the reason that it took so long to break this code. It was even known in french as 'the indecipherable cipher', until a man by the name of Charles Babbage broke it." />
+            
+              <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="The method for decrypting is very intuitive and might even seem obvious once you know, so I encourage you to try Challenge 4 now before you know how to solve it. If you are able to, you will have broken what took over 3 centuries break." />
+             
+              <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="The Vignere cipher is actually quite easy to solve if you know the size of the key (how many letters). If you know the key is 5 letters long, you would just split the message into 5 different alphabets, the first with every first letter, second with every second letter, out of 5, and so on. You can then use our old friend frequency analysis to solve all 5 as separate entities. The frequency analysis will be weaker (the letter sampling will be smaller, so statistically the distrubution will not be as close to the real distribution as a longer message would be) but you can use phonics to predict letters in different alphabets." />
+        
+              <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="If you don't have the key length, then you have a bit more work to do. A sure-fire method of breaking the code is guessing key lengths until the letter frequencies in the alphabets you acquire are close to the true english frequencies. Then you will just use the above method, see if it produces a meaningful message, and if it doesn't rinse and repeat." />
+              
+                <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="The One Time Pad"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+                
+                 <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="The One Time Pad is a special kind of Vigenere cipher in which the key is the same length or greater than the length of the message. This cipher is special and deserves acknowledgement because it has the property of 'perfect secrecy', meaning the cipher is completely secure. This happens because if the message and the key are both length n, they both have 26^n possible letter sequences. Because the message-space (set of all possible messages) and key-space(set of all possible keys) are the same, the cipher-space (set of all possible ciphertexts) is the same size as the message space. This creates a situation where an attacker can recover the message 'attack at dawn' when the real message was 'attack at noon' or 'meet tomorrow'. The attacker has no way of telling which one of these was the real message, so the cipher is perfectly secret."/>
+                 
+                  <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="The only problem with this cipher is a logistical one. The key only does its job if it can be transferred secretly, and if you could transfer a key the same size as the message, you could have just transferred the message and saved yourself all of the trouble of encryption." />
+                  
+        </LinearLayout>
+        
+    </ScrollView>
+
+</LinearLayout>

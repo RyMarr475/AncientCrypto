@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rymarr.ancientcrypto"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.rymarr.ancientcrypto.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.rymarr.ancientcrypto.LearnActivity"
+            android:label="@string/title_activity_learn"
+            android:parentActivityName="com.rymarr.ancientcrypto.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rymarr.ancientcrypto.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.rymarr.ancientcrypto.ChallengeActivity"
+            android:label="@string/title_activity_challenge"
+            android:parentActivityName="com.rymarr.ancientcrypto.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rymarr.ancientcrypto.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.rymarr.ancientcrypto.CaesarCipher"
+            android:label="@string/title_activity_caesar_cipher"
+            android:parentActivityName="com.rymarr.ancientcrypto.LearnActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rymarr.ancientcrypto.LearnActivity" />
+        </activity>
+        <activity
+            android:name="com.rymarr.ancientcrypto.MonoalphabeticCipher"
+            android:label="@string/title_activity_monoalphabetic_cipher"
+            android:parentActivityName="com.rymarr.ancientcrypto.LearnActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rymarr.ancientcrypto.LearnActivity" />
+        </activity>
+        <activity
+            android:name="com.rymarr.ancientcrypto.LevelOne"
+            android:label="@string/title_activity_level_one" >
+        </activity>
+        <activity
+            android:name="com.rymarr.ancientcrypto.LevelTwo"
+            android:label="@string/title_activity_level_two" >
+        </activity>
+        <activity
+            android:name="com.rymarr.ancientcrypto.LevelThree"
+            android:label="@string/title_activity_level_three"
+            android:parentActivityName="com.rymarr.ancientcrypto.ChallengeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rymarr.ancientcrypto.ChallengeActivity" />
+        </activity>
+        <activity
+            android:name="com.rymarr.ancientcrypto.VigenereCipher"
+            android:label="@string/title_activity_vigenere_cipher"
+            android:parentActivityName="com.rymarr.ancientcrypto.LearnActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rymarr.ancientcrypto.LearnActivity" />
+        </activity>
+        <activity
+            android:name="com.rymarr.ancientcrypto.LevelFour"
+            android:label="@string/title_activity_level_four"
+            android:parentActivityName="com.rymarr.ancientcrypto.ChallengeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rymarr.ancientcrypto.ChallengeActivity" />
+        </activity>
+    </application>
+
+</manifest>

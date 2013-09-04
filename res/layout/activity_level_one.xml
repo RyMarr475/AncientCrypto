@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LevelOne" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Courier Captured"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"     />
+        
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="You are a member of the army of the Roman Republic, and Caesar is planning an attack on your city! An army courier of Caesar's was captured; however, the information he was carrying was encrypted. See if you can find any useful information from it." />
+
+	<TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="The ciphertext reads: jccjltjcmjfw" />
+
+	<TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Enter the plaintext below" />
+	
+	<TextView
+        android:id="@+id/feedbackLv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="" />
+	
+	<EditText
+	    android:id="@+id/lv1Answer"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:ems="10" >
+
+	    <requestFocus />
+	</EditText>
+
+	<Button
+	    android:id="@+id/lv1Button"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:onClick="lv1Check"
+	    android:text="Check answer" />
+
+</LinearLayout>
